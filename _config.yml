@@ -86,6 +86,11 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
+     
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/     
 
 defaults:
   # _posts
@@ -106,6 +111,14 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true      
 
 category_archive:
   type: liquid
